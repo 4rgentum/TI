@@ -1,0 +1,60 @@
+\doxysection{main.\+Code39\+Generator Class Reference}
+\hypertarget{classmain_1_1_code39_generator}{}\label{classmain_1_1_code39_generator}\index{main.Code39Generator@{main.Code39Generator}}
+Inheritance diagram for main.\+Code39\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1_code39_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_code39_generator_a6e33022c4e3f0567849b26d3e7542c3d}{generate}} (self, str data, str file\+\_\+path, str file\+\_\+format, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classmain_1_1_code39_generator_a344b7f679d2013fb71c27771b5870a19}{decode}} (self, str file\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Класс для работы с линейным штрих-кодом Code39.
+@details Реализует генерацию и декодирование.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_code39_generator_a344b7f679d2013fb71c27771b5870a19}\index{main.Code39Generator@{main.Code39Generator}!decode@{decode}}
+\index{decode@{decode}!main.Code39Generator@{main.Code39Generator}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code39_generator_a344b7f679d2013fb71c27771b5870a19} 
+ Optional\mbox{[}str\mbox{]} main.\+Code39\+Generator.\+decode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn decode
+@brief Декодирование Code39.
+@param file_path Путь к файлу.
+@return Строка с декодированными данными или None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40}{main.\+Code\+Generator}}.
+
+\Hypertarget{classmain_1_1_code39_generator_a6e33022c4e3f0567849b26d3e7542c3d}\index{main.Code39Generator@{main.Code39Generator}!generate@{generate}}
+\index{generate@{generate}!main.Code39Generator@{main.Code39Generator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code39_generator_a6e33022c4e3f0567849b26d3e7542c3d} 
+main.\+Code39\+Generator.\+generate (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{data}{, }\item[{str}]{file\+\_\+path}{, }\item[{str}]{file\+\_\+format}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn generate
+@brief Генерация Code39.
+@param data Данные для кодирования.
+@param file_path Путь для сохранения файла.
+@param file_format Формат файла (png/jpg).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c}{main.\+Code\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}

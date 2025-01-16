@@ -1,0 +1,62 @@
+\doxysection{main.\+Code\+Generator Class Reference}
+\hypertarget{classmain_1_1_code_generator}{}\label{classmain_1_1_code_generator}\index{main.CodeGenerator@{main.CodeGenerator}}
+Inheritance diagram for main.\+Code\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.333333cm]{classmain_1_1_code_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c}{generate}} (self, str data, str file\+\_\+path, str file\+\_\+format, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40}{decode}} (self, str file\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Базовый класс для всех генераторов кодов.
+@details Определяет интерфейс для генерации и декодирования кодов.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40}\index{main.CodeGenerator@{main.CodeGenerator}!decode@{decode}}
+\index{decode@{decode}!main.CodeGenerator@{main.CodeGenerator}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40} 
+ Optional\mbox{[}str\mbox{]} main.\+Code\+Generator.\+decode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn decode
+@brief Декодирование кода.
+@param file_path Путь к файлу, содержащему закодированные данные.
+@return Строка с декодированными данными или None, если данные не были распознаны.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classmain_1_1_code128_generator_a689f6a5ef1deaacca0c108666cc3444b}{main.\+Code128\+Generator}}, \mbox{\hyperlink{classmain_1_1_code39_generator_a344b7f679d2013fb71c27771b5870a19}{main.\+Code39\+Generator}}, \mbox{\hyperlink{classmain_1_1_data_matrix_generator_ae78ed00f7acf399fe1aa0cf917bf1ead}{main.\+Data\+Matrix\+Generator}}, \mbox{\hyperlink{classmain_1_1_p_d_f417_generator_ac26621ce328e5b7c532b73e7ae01e9da}{main.\+PDF417\+Generator}}, and \mbox{\hyperlink{classmain_1_1_q_r_code_generator_a1fca5789f694ae02b2cf91a49c97a02f}{main.\+QRCode\+Generator}}.
+
+\Hypertarget{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c}\index{main.CodeGenerator@{main.CodeGenerator}!generate@{generate}}
+\index{generate@{generate}!main.CodeGenerator@{main.CodeGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c} 
+main.\+Code\+Generator.\+generate (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{data}{, }\item[{str}]{file\+\_\+path}{, }\item[{str}]{file\+\_\+format}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn generate
+@brief Генерация кода.
+@param data Данные для кодирования.
+@param file_path Путь для сохранения файла.
+@param file_format Формат файла (png/jpg).
+@param kwargs Дополнительные параметры, такие как уровень коррекции ошибок.
+@note Метод обязателен для реализации в наследниках.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classmain_1_1_code128_generator_ab5026bca666dec45bd8f306dffdb797d}{main.\+Code128\+Generator}}, \mbox{\hyperlink{classmain_1_1_code39_generator_a6e33022c4e3f0567849b26d3e7542c3d}{main.\+Code39\+Generator}}, \mbox{\hyperlink{classmain_1_1_data_matrix_generator_a4a43aec93b01c81b87bf279d63dafccc}{main.\+Data\+Matrix\+Generator}}, \mbox{\hyperlink{classmain_1_1_p_d_f417_generator_afdef4c0343b1df450f8471516fa05b6a}{main.\+PDF417\+Generator}}, and \mbox{\hyperlink{classmain_1_1_q_r_code_generator_a6fd1af2843b734773a9f1dc0fbdbb128}{main.\+QRCode\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}

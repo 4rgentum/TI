@@ -1,0 +1,60 @@
+\doxysection{main.\+Code128\+Generator Class Reference}
+\hypertarget{classmain_1_1_code128_generator}{}\label{classmain_1_1_code128_generator}\index{main.Code128Generator@{main.Code128Generator}}
+Inheritance diagram for main.\+Code128\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1_code128_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_code128_generator_ab5026bca666dec45bd8f306dffdb797d}{generate}} (self, str data, str file\+\_\+path, str file\+\_\+format, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classmain_1_1_code128_generator_a689f6a5ef1deaacca0c108666cc3444b}{decode}} (self, str file\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Класс для работы с линейным штрих-кодом Code128.
+@details Реализует генерацию и декодирование с использованием библиотеки python-barcode.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_code128_generator_a689f6a5ef1deaacca0c108666cc3444b}\index{main.Code128Generator@{main.Code128Generator}!decode@{decode}}
+\index{decode@{decode}!main.Code128Generator@{main.Code128Generator}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code128_generator_a689f6a5ef1deaacca0c108666cc3444b} 
+ Optional\mbox{[}str\mbox{]} main.\+Code128\+Generator.\+decode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn decode
+@brief Декодирование Code128.
+@param file_path Путь к файлу.
+@return Строка с декодированными данными или None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40}{main.\+Code\+Generator}}.
+
+\Hypertarget{classmain_1_1_code128_generator_ab5026bca666dec45bd8f306dffdb797d}\index{main.Code128Generator@{main.Code128Generator}!generate@{generate}}
+\index{generate@{generate}!main.Code128Generator@{main.Code128Generator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmain_1_1_code128_generator_ab5026bca666dec45bd8f306dffdb797d} 
+main.\+Code128\+Generator.\+generate (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{data}{, }\item[{str}]{file\+\_\+path}{, }\item[{str}]{file\+\_\+format}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn generate
+@brief Генерация Code128.
+@param data Данные для кодирования.
+@param file_path Путь для сохранения файла.
+@param file_format Формат файла (png/jpg).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c}{main.\+Code\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}

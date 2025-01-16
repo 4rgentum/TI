@@ -1,0 +1,70 @@
+\doxysection{main Namespace Reference}
+\hypertarget{namespacemain}{}\label{namespacemain}\index{main@{main}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmain_1_1_code128_generator}{Code128\+Generator}}
+\item 
+class \mbox{\hyperlink{classmain_1_1_code39_generator}{Code39\+Generator}}
+\item 
+class \mbox{\hyperlink{classmain_1_1_code_generator}{Code\+Generator}}
+\item 
+class \mbox{\hyperlink{classmain_1_1_data_matrix_generator}{Data\+Matrix\+Generator}}
+\item 
+class \mbox{\hyperlink{classmain_1_1_p_d_f417_generator}{PDF417\+Generator}}
+\item 
+class \mbox{\hyperlink{classmain_1_1_q_r_code_generator}{QRCode\+Generator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacemain_a0d431eb6d1bc200d7c1ee56df5fbff93}{transliterate\+\_\+text}} (str text)
+\item 
+\mbox{\hyperlink{namespacemain_a0a44d7ddfcadb624f18be5b6247e0e15}{display\+\_\+menu}} ()
+\item 
+\mbox{\hyperlink{namespacemain_a3140e9a5b6a71ffbf498198cfc471b88}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file main.py
+@brief Программа для работы с различными типами кодов: QR, DataMatrix, Code128, Code39 и PDF417.
+@details Программа позволяет генерировать и декодировать коды. Также поддерживается транслитерация текста, работа с разными форматами файлов (PNG, JPG) и настройка параметров кодов.
+
+@brief Импорты стандартных библиотек и модулей.
+@details Содержит библиотеки для работы с кодами, обработки изображений, транслитерации и работы с файловой системой.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemain_a0a44d7ddfcadb624f18be5b6247e0e15}\index{main@{main}!display\_menu@{display\_menu}}
+\index{display\_menu@{display\_menu}!main@{main}}
+\doxysubsubsection{\texorpdfstring{display\_menu()}{display\_menu()}}
+{\footnotesize\ttfamily \label{namespacemain_a0a44d7ddfcadb624f18be5b6247e0e15} 
+main.\+display\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn display_menu
+@brief Отображение меню для выбора типа кода.
+@return Тип кода (например, qr, datamatrix, code128, code39, pdf417).
+\end{DoxyVerb}
+ \Hypertarget{namespacemain_a3140e9a5b6a71ffbf498198cfc471b88}\index{main@{main}!main@{main}}
+\index{main@{main}!main@{main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacemain_a3140e9a5b6a71ffbf498198cfc471b88} 
+main.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn main
+@brief Основная функция программы.
+@details Позволяет выбирать режимы работы (кодирование/декодирование), задавать параметры и обрабатывать ошибки.
+\end{DoxyVerb}
+ \Hypertarget{namespacemain_a0d431eb6d1bc200d7c1ee56df5fbff93}\index{main@{main}!transliterate\_text@{transliterate\_text}}
+\index{transliterate\_text@{transliterate\_text}!main@{main}}
+\doxysubsubsection{\texorpdfstring{transliterate\_text()}{transliterate\_text()}}
+{\footnotesize\ttfamily \label{namespacemain_a0d431eb6d1bc200d7c1ee56df5fbff93} 
+ str main.\+transliterate\+\_\+text (\begin{DoxyParamCaption}\item[{str}]{text}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Функция для транслитерации текста.
+@param text Текст для транслитерации.
+@return Транслитерированный текст (если присутствуют символы, отличные от ASCII) или исходный текст.
+\end{DoxyVerb}
+ 

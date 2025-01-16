@@ -1,0 +1,60 @@
+\doxysection{main.\+Data\+Matrix\+Generator Class Reference}
+\hypertarget{classmain_1_1_data_matrix_generator}{}\label{classmain_1_1_data_matrix_generator}\index{main.DataMatrixGenerator@{main.DataMatrixGenerator}}
+Inheritance diagram for main.\+Data\+Matrix\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1_data_matrix_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_data_matrix_generator_a4a43aec93b01c81b87bf279d63dafccc}{generate}} (self, str data, str file\+\_\+path, str file\+\_\+format, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classmain_1_1_data_matrix_generator_ae78ed00f7acf399fe1aa0cf917bf1ead}{decode}} (self, str file\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Класс для работы с DataMatrix-кодами.
+@details Использует библиотеку pylibdmtx для кодирования и декодирования.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_data_matrix_generator_ae78ed00f7acf399fe1aa0cf917bf1ead}\index{main.DataMatrixGenerator@{main.DataMatrixGenerator}!decode@{decode}}
+\index{decode@{decode}!main.DataMatrixGenerator@{main.DataMatrixGenerator}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily \label{classmain_1_1_data_matrix_generator_ae78ed00f7acf399fe1aa0cf917bf1ead} 
+ Optional\mbox{[}str\mbox{]} main.\+Data\+Matrix\+Generator.\+decode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn decode
+@brief Декодирование DataMatrix-кода.
+@param file_path Путь к файлу.
+@return Строка с декодированными данными или None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_a6685d5003536e041e259c30bd2dacd40}{main.\+Code\+Generator}}.
+
+\Hypertarget{classmain_1_1_data_matrix_generator_a4a43aec93b01c81b87bf279d63dafccc}\index{main.DataMatrixGenerator@{main.DataMatrixGenerator}!generate@{generate}}
+\index{generate@{generate}!main.DataMatrixGenerator@{main.DataMatrixGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmain_1_1_data_matrix_generator_a4a43aec93b01c81b87bf279d63dafccc} 
+main.\+Data\+Matrix\+Generator.\+generate (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{data}{, }\item[{str}]{file\+\_\+path}{, }\item[{str}]{file\+\_\+format}{, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@fn generate
+@brief Генерация DataMatrix-кода.
+@param data Данные для кодирования.
+@param file_path Путь для сохранения файла.
+@param file_format Формат файла (png/jpg).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classmain_1_1_code_generator_ad7af47da3ba1a09c5d52ae0dd419ce9c}{main.\+Code\+Generator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}
