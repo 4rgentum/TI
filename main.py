@@ -39,7 +39,7 @@ class CodeGenerator():
     @details Определяет интерфейс для генерации и декодирования кодов.
     """
     @abstractmethod
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация кода.
@@ -66,7 +66,7 @@ class QRCodeGenerator(CodeGenerator):
     @brief Класс для работы с QR-кодами.
     @details Реализует методы генерации и декодирования QR-кодов с использованием библиотеки qrcode.
     """
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация QR-кода.
@@ -76,9 +76,7 @@ class QRCodeGenerator(CodeGenerator):
         @param kwargs Дополнительные параметры, включая error_correction (уровень коррекции ошибок).
         """
         data = transliterate_text(data)
-        qr = qrcode.QRCode(
-            error_correction=kwargs.get('error_correction', qrcode.constants.ERROR_CORRECT_M)
-        )
+        qr = qrcode.QRCode()
         qr.add_data(data)
         qr.make(fit=True)
         img = qr.make_image(fill="black", back_color="white")
@@ -104,7 +102,7 @@ class DataMatrixGenerator(CodeGenerator):
     @brief Класс для работы с DataMatrix-кодами.
     @details Использует библиотеку pylibdmtx для кодирования и декодирования.
     """
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация DataMatrix-кода.
@@ -137,7 +135,7 @@ class Code128Generator(CodeGenerator):
     @brief Класс для работы с линейным штрих-кодом Code128.
     @details Реализует генерацию и декодирование с использованием библиотеки python-barcode.
     """
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация Code128.
@@ -171,7 +169,7 @@ class Code39Generator(CodeGenerator):
     @brief Класс для работы с линейным штрих-кодом Code39.
     @details Реализует генерацию и декодирование.
     """
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация Code39.
@@ -205,7 +203,7 @@ class PDF417Generator(CodeGenerator):
     @brief Класс для работы с PDF417.
     @details Использует библиотеку pdf417 для генерации, декодирование через pyzbar.
     """
-    def generate(self, data: str, file_path: str, file_format: str, **kwargs):
+    def generate(self, data: str, file_path: str, file_format: str):
         """
         @fn generate
         @brief Генерация PDF417.
@@ -319,10 +317,8 @@ def main():
 
             if not file_path.endswith(".png") and not file_path.endswith(".jpg"):
                 file_path = file_path + (".jpg" if file_format == "jpg" else ".png")
-
-            error_correction = input("Введите уровень помехоустойчивости (по умолчанию): ").strip()
             try:
-                generator.generate(data, file_path, file_format, error_correction=error_correction)
+                generator.generate(data, file_path, file_format)
                 print(f"Код сохранен в {file_path}")
             except Exception as e:
                 print(f"Ошибка: {e}")
