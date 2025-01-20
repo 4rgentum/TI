@@ -214,7 +214,7 @@ class PDF417Generator(CodeGenerator):
         @param file_format Формат файла (png/jpg).
         """
         data = transliterate_text(data)
-        codes = pdf417_encode(data, error_level=kwargs.get('error_level', 2))
+        codes = pdf417_encode(data)
         img = render_image(codes)
         if file_format.lower() == "jpg":
             img = img.convert("RGB")
