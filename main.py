@@ -21,6 +21,7 @@ from PIL import Image
 from reportlab.graphics import renderPM
 from svglib.svglib import svg2rlg
 from pdf417 import encode as pdf417_encode, render_image
+import zxing
 import numpy as np
 import io
 
@@ -228,9 +229,21 @@ class PDF417Generator(CodeGenerator):
         @param file_path Путь к файлу.
         @return Строка с декодированными данными или None.
         """
-        image = Image.open(file_path)
-        results = zbar_decode(image)
-        return results[0].data.decode() if results else None
+        try:
+            # Создаем объект ZXing
+            reader = zxing.BarCodeReader()
+
+            # Декодируем изображение
+            barcode = reader.decode(file_path)
+
+            if barcode:
+                return barcode.parsed  # Возвращаем декодированные данные
+            else:
+                print("Не удалось распознать код на изображении.")
+                return None
+        except Exception as e:
+            print(f"Ошибка при декодировании PDF417 с использованием zxing: {e}")
+            return None
 
 def display_menu():
     """
